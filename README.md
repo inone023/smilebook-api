@@ -77,15 +77,55 @@ yaml
 
 ---
 
-## 📸 예시 API 구조 (간략)
+## 📸 예시 API 구조
 
-| 기능 | 메서드 | 엔드포인트 |
-|------|---------|-------------|
-| 회원가입 | `POST` | `/api/member/signup` |
-| 로그인 | `POST` | `/api/member/login` |
-| 도서 조회 | `GET` | `/api/books` |
-| 예약 등록 | `POST` | `/api/reservations` |
-| 관리자 인증 | `POST` | `/api/admin/checkAdminCode` |
+👤 회원 (Member)
+| 기능              | 메서드    | 엔드포인트                            |
+| --------------- | ------ | -------------------------------- |
+| 회원가입            | `POST` | `/member/join`                   |
+| 로그인             | `POST` | `/api/login`                     |
+| 회원 정보 조회        | `GET`  | `/member/{memberId}`             |
+| 회원 상세 정보 조회     | `POST` | `/api/member/details`            |
+| 회원 정보 수정        | `POST` | `/api/member/update`             |
+| 회원의 모든 대출 도서 조회 | `GET`  | `/member/{memberId}/all-books`   |
+| 경고 업데이트         | `POST` | `/member/updateWarning`          |
+| 정지 사유 업데이트      | `POST` | `/member/updateSuspensionReason` |
+
+🧑‍💼 관리자 (Admin)
+| 기능           | 메서드    | 엔드포인트                 |
+| ------------ | ------ | --------------------- |
+| 관리자 코드 확인    | `POST` | `/api/checkAdminCode` |
+| 전체 사용자 목록 조회 | `GET`  | `/admin/users`        |
+
+📚 도서 (Book)
+| 기능               | 메서드    | 엔드포인트                                   |
+| ---------------- | ------ | --------------------------------------- |
+| 전체 도서 목록 조회      | `GET`  | `/books`                                |
+| 도서 단건 조회         | `GET`  | `/books/{bookId}`                       |
+| 카테고리별 도서 목록 조회   | `GET`  | `/books/category/{category}`            |
+| 도서 위치 조회 (제목 기준) | `GET`  | `/books/bookLocation?title={bookTitle}` |
+| 도서 위치 조회 (ID 기준) | `GET`  | `/books/{bookId}/location`              |
+| 도서 추가            | `POST` | `/books/add`                            |
+| 대출 연장            | `PUT`  | `/books/{bookId}/extendLoan`            |
+
+🗂️ 위시리스트 (Wishlist)
+| 기능            | 메서드      | 엔드포인트                                  |
+| ------------- | -------- | -------------------------------------- |
+| 위시리스트 추가      | `POST`   | `/wishlist/add`                        |
+| 위시리스트 조회      | `POST`   | `/wishlist/check`                      |
+| 회원별 위시리스트 조회  | `POST`   | `/wishlist/{memberId}`                 |
+| 위시리스트에서 도서 삭제 | `DELETE` | `/wishlist/delete/{memberId}/{bookId}` |
+
+📅 예약 (Reservation)
+| 기능    | 메서드    | 엔드포인트           |
+| ----- | ------ | --------------- |
+| 도서 예약 | `POST` | `/book/reserve` |
+
+🛰️ IoT / RFID / Firebase
+| 기능             | 메서드    | 엔드포인트                 |
+| -------------- | ------ | --------------------- |
+| Firebase 토큰 등록 | `POST` | `/firebase/token`     |
+| 이미지 조회         | `GET`  | `/images/{imageName}` |
 
 ---
 
