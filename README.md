@@ -94,9 +94,6 @@ Android App ⇄ REST API (Spring Boot) ⇄ MySQL (RDS)
 ⇅
 Arduino (RFID, PIR)
 
-yaml
-코드 복사
-
 ---
 
 ## 🧠 주요 구현 내용
