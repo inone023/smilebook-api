@@ -8,13 +8,46 @@ Spring Boot 기반 REST API로 설계되었으며, AWS 환경에서 운영 가�
 
 ## 🧠 프로젝트 개요
 
-- **프로젝트명:** IoT를 이용한 스마트 도서관  
-- **팀명:** SmileBook  
-- **기간:** 2023.09.06 ~ 2024.06.11  
-- **담당 역할:** 서버 구축, API 설계 및 구현, 인증 로직 커스터마이징  
-- **관련 리포지토리:**  
-  - [📱 SmileBook-Android](https://github.com/yourusername/smilebook-android)  
-  - [🔌 SmileBook-Arduino](https://github.com/yourusername/smilebook-arduino)
+| 항목 | 내용 |
+|------|------|
+| **프로젝트명** | IoT를 이용한 스마트 도서관 |
+| **팀명** | SmileBook |
+| **개발 기간** | 2023.09.06 ~ 2024.06.11 |
+
+---
+
+## 담당 역할 (시소연 – 팀장)
+
+팀장으로서 서버, 하드웨어, 안드로이드 전반을 아우르며 시스템 통합 및 주요 기능 개발을 담당했습니다.
+
+### 주요 업무
+- 프로젝트 일정 관리 및 역할 분담  
+- AWS EC2·RDS 서버 구축 및 환경 설정  
+- Spring Boot 기반 REST API 구현  
+  - 회원, 도서, 대여, RFID 연동 API 설계 및 개발  
+- Arduino RC522 RFID 회로 재배치 및 통신 안정화, 제어 로직 개발  
+- Android Retrofit 통신 및 로직 개발  
+- Amazon RDS(MySQL) 데이터베이스 설계 및 JPA Entity 매핑  
+  - `member`, `admin`, `book_category` 엔티티 설계  
+- 테스트 및 오류 해결  
+  - 커스텀 필터/핸들러 적용을 통한 인증 구조 단순화 및 보안 강화  
+  - 기능 단위 테스트 및 오류(403, JSON 매핑 등) 해결  
+
+### 구현 기능
+- 회원가입 및 로그인  
+- 도서 위치 조회  
+- 내 정보 조회 및 수정  
+- 관리자 모드 전환  
+- 도서 예약  
+- FCM을 이용한 대출·반납·이용정지·경고 알림  
+- 회원 이용정지 및 경고 기능  
+
+---
+
+## 관련 리포지토리
+
+- [SmileBook-Android (Android)](https://github.com/yourusername/smilebook-android)  
+- [SmileBook-Arduino (Arduino)](https://github.com/yourusername/smilebook-arduino)
 
 ---
 
