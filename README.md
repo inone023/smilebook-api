@@ -45,8 +45,8 @@ Spring Boot 기반 REST API로 설계되었으며, AWS 환경에서 운영 가�
 
 ## 관련 리포지토리
 
-- [SmileBook-Android (Android)](https://github.com/yourusername/smilebook-android)  
-- [SmileBook-Arduino (Arduino)](https://github.com/yourusername/smilebook-arduino)
+- [SmileBook-Android (Android)](https://github.com/inone023/smilebook-android)  
+- [SmileBook-Arduino (Arduino)](https://github.com/inone023/smilebook-arduino)
 
 ---
 
